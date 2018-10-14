@@ -23,5 +23,10 @@ namespace PleaseWork.Hubs
         {
             await Clients.All.SendAsync("youClicked");
         }
+
+        public async Task NewMessage(string message)
+        {
+            await Clients.All.SendAsync("downloadMessage", message);
+        }
     }
 }
